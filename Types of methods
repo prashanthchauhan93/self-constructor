@@ -1,0 +1,25 @@
+# Types of Methods
+class student:
+    school='python'
+    def __init__(self,m1,m2,m3):                    # instance method
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+    def avg(self):
+        return (self.m1+self.m2+self.m3)/3
+    def get_m1(self):                               # Accessor Method
+        return self.m1
+    def set_m1(self,value):                         #Mutator Method
+        self.m1=value
+    @classmethod                                    # Decorator
+    def getschool(cls):                                  # class Method
+        return cls.school
+    @staticmethod
+    def info():
+        print("This is student class...")
+s1=student(96,67,85)
+s2=student(89,32,52)
+print("Average of student1:",s1.avg())
+print("Average of student2:",s2.avg())
+print(student.info())
+student.info()
